@@ -1,130 +1,262 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Responsive Ecommerce Cards</title>
-    <style>
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-            font-family: georgia;
-        }
-        .container {
-            width: 97%;
-            margin: auto;
-            display: flex;
-            flex-wrap: wrap;
-            justify-content: center;
-            gap: 20px;
-            padding: 20px;
-        }
-        .card {
-            width: 100%;
-            max-width: 300px;
-            border: 3px inset green;
-            padding: 15px;
-            background-color: #f8f8f8;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            text-align: center;
-            border-radius: 10px;
-        }
-        .card img {
-            width: 100%;
-            height: auto;
-            max-height: 150px;
-            object-fit: cover;
-            margin-bottom: 10px;
-        }
-        .buttons {
-            display: flex;
-            flex-direction: column;
-            gap: 10px;
-            margin-top: 10px;
-        }
-        button {
-            padding: 5px 10px;
-            border: none;
-            background-color: #28a745;
-            color: white;
-            cursor: pointer;
-            border-radius: 5px;
-            width: 100%;
-        }
-        .preview {
-            background-color: #007bff;
-        }
-        @media (min-width: 361px) {
-            .card {
-                width: calc(50% - 20px);
-            }
-        }
-        @media (min-width: 600px) {
-            .card {
-                width: calc(33.33% - 20px);
-            }
-        }
-        @media (min-width: 800px) {
-            .card {
-                width: calc(25% - 20px);
-            }
-        }
-        @media (min-width: 1000px) {
-            .card {
-                width: calc(20% - 20px);
-            }
-        }
-        .top 
-        {
-        	border-bottom: 2px dashed green;
-        	font-family: georgia;
-        }
-    </style>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title></title>
+	<style type="text/css">
+		*
+		{
+			margin: 0;
+			padding: 0;
+			box-sizing: border-box;
+			font-family: CAMBRIA;
+		}
+		@media (min-width:600px)
+		{
+			.nav-small
+			{
+				display: none;
+			}
+			.gwani
+			{
+				width: 100%;
+				height: 80vh;
+				background-image: url('gwani4.jpg');
+				background-position: center;
+				background-size: cover;
+
+			}
+			#vote-gwani
+			{
+				width: 45%;
+				margin-left: 50%;
+				display: flex;
+				font-size: 5VH;
+				padding: 2PX;
+				justify-content: center;
+				text-align: center;
+				align-items: center;
+				background-color: white;
+			}
+			#vote-gwani-small
+			{
+				display: none;
+			}
+			#links-small
+			{
+				display: none;
+			}
+		}
+		@media (max-width:599px)
+		{
+			.nav-big
+			{
+				display: none;
+			}
+			.gwani
+			{
+				width: 100%;
+				height: 80vh;
+				background-image: url('gwani2.jpg');
+				background-position: center;
+				background-size: cover;
+			}
+			#vote-gwani
+			{
+				display: none;
+			}
+			#vote-gwani-small
+			{
+				height: 5vh;
+				background-color: black;
+				color: white;
+				display: flex;
+				justify-content: center;
+				align-items: center;
+			}
+			#big-break
+			{
+				display: none;
+			}
+			#links-big
+			{
+				display: none;
+			}
+		}
+		.nav-small
+		{
+			overflow: auto;
+		}
+		.nav-big
+		{
+			overflow: auto;
+		}
+		.nav-small-left
+		{
+			width: 80%;
+			height: 10vh;
+			float: left;
+			display: flex;
+			align-items: center;
+			border-bottom: 2px solid whitesmoke;
+		}
+		.nav-big-left
+		{
+			width: 25%;
+			height: 15vh;
+			float: left;
+			display: flex;
+			align-items: center;
+			justify-content: center;
+			border-bottom: 2px solid;
+		}
+		.nav-big-mid
+		{
+			width: 50%;
+			height: 15vh;
+			float: left;
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			font-size: 3.5vh;
+			border-bottom: 2px solid;
+		}
+		.nav-big-right
+		{
+			width: 25%;
+			height: 15vh;
+			float: left;
+			display: flex;
+			align-items: center;
+			border-bottom: 2px solid;
+			text-align: center;
+		}
+		.nav-small-right
+		{
+			width: 20%;
+			height: 10vh;
+			float: left;
+			display: flex;
+			align-items: center;
+			justify-content: center;
+			background-color: whitesmoke;
+		}
+		.logo
+		{
+			border: 2px solid;
+			border-left: none;
+			border-right: none;
+			margin-left: 10px;
+			font-size: 25px;		
+		}
+		.logo-big
+		{
+			border: 2px solid;
+			border-left: none;
+			border-right: none;
+			margin-left: 10px;
+			font-size: 28px;		
+		}
+		.contribute-big
+		{
+			border: 2px solid;
+			width: 90%;
+			padding: 10px;
+			font-family: trebuchet ms;
+			font-weight: bolder;
+			font-size: 20px;
+		}
+		.box-links-small
+		{
+			border: 2px solid;
+			width: 80%;
+			margin-left: 10%;
+			
+			margin-bottom: 10px;
+			padding: 3px;
+			text-align: center;
+
+		}
+		.box-links-big
+		{
+			float: left;
+			margin-left: 3%;
+			margin-right: 2.5%;
+			width: 27%;
+			padding-top: 5px;
+			padding-bottom: 5px;
+			margin-bottom: 5px;
+			text-align: center;
+			border: 2px solid;
+		}
+		#links-small
+		{
+			background-color: whitesmoke;
+			color: black;
+			height: 250px;
+			margin-top: -200px;
+
+		}
+		#links-big
+		{
+			background-color: whitesmoke;
+			color: black;
+			height: 250px;
+			margin-top: -200px;
+
+		}
+	</style>
 </head>
 <body>
-	<div class="top">
-		<div><h1 style="margin-left: 10px;">AHU</h1></div>
+	<div class="nav">
+		<div class="nav-small">
+			<div class="nav-small-left">
+				<div class="logo">
+					GWANI
+				</div>
+			</div>
+			<div class="nav-small-right">
+				<img src="menu.png">
+			</div>
+		</div>
+
+		<div class="nav-big">
+			<div class="nav-big-left">
+				<div class="logo-big">
+					GWANI
+				</div>
+			</div>
+			<div class="nav-big-mid">
+					<div style="width: 90%;" class="top-links">Home | About | Project | Contribute </div>
+			</div>
+			<div class="nav-big-right">
+				<div class="contribute-big">
+					Contact Us
+				</div>
+			</div>
+		</div>
 	</div>
-    <div class="container">
-        <div class="card">
-            <img src="product.jpg" alt="Product Image">
-            <p>Product Description</p>
-            <p><strong>$19.99</strong></p>
-            <div class="buttons">
-                <button class="preview">Preview</button>
-                <button>Add to Cart</button>
-            </div>
-        </div>
-        <div class="card">
-            <img src="product.jpg" alt="Product Image">
-            <p>Product Description</p>
-            <p><strong>$24.99</strong></p>
-            <div class="buttons">
-                <button class="preview">Preview</button>
-                <button>Add to Cart</button>
-            </div>
-        </div>
-        <div class="card">
-            <img src="product.jpg" alt="Product Image">
-            <p>Product Description</p>
-            <p><strong>$29.99</strong></p>
-            <div class="buttons">
-                <button class="preview">Preview</button>
-                <button>Add to Cart</button>
-            </div>
-        </div>
-        <div class="card">
-            <img src="product.jpg" alt="Product Image">
-            <p>Product Description</p>
-            <p><strong>$34.99</strong></p>
-            <div class="buttons">
-                <button class="preview">Preview</button>
-                <button>Add to Cart</button>
-            </div>
-        </div>
-    </div>
+	<div id="vote-gwani-small">
+			VOTE GWANI FOR BASSA/JOS NORTH 2027
+		</div>
+	<div class="gwani">
+		<br id="big-break">
+		<div id="vote-gwani">
+			VOTE GWANI MOHAMMED ALQADI FOR BASSA/JOS NORTH FEDERAL CONSITUENCY 2027
+		</div>
+	</div>
+	<div id="links-small">
+		<br>
+		<div class="box-links-small">Projects</div>
+		<div class="box-links-small">About Gwani</div>
+		<div class="box-links-small">Get Involved</div>
+	</div>
+	<div id="links-big">
+		<br>
+		<div class="box-links-big">Projects</div>
+		<div class="box-links-big">About Gwani</div>
+		<div class="box-links-big">Get Involved</div>
+	</div>
 </body>
 </html>
